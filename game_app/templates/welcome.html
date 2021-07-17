@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock - Paper - Scissor game</title>
+    <link rel="stylesheet" href="{% static 'css/welcome.css'%}">
+</head>
+<body>
+    <div class="container">
+        {% if message %}
+            <h4 class="margin">{{ message }}</h4>
+        {% endif %}
+        <h1 class="margin"> Welcome {{names}}</h1>
+        <h3>Press the button below</h3>
+        <h3 class="margin">to start the game</h3>
+        <div class="butns margin">
+            <a href="{% url 'welcome' id=1 %}" class="buton">Rock</a>
+            <a href="{% url 'welcome' id=2 %}" class="buton">Paper</a>
+            <a href="{% url 'welcome' id=3 %}" class="buton">Scissor</a>
+        </div>
+        <div class="score-choosen">
+            <h4>Computer: {{ computer }}</h4>
+            <h4 class="margin">Player (You): {{ user }}</h4>
+        </div>
+
+        <div class="score-area">
+            <div class="score">Score: {{ score }}</div>
+            <a class="buton" href="{% url 'welcome' id=100 %}">Reset</a>
+        </div>
+
+    </div>
+</body>
+</html>
