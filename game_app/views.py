@@ -17,23 +17,15 @@ def welcome(request,id):
         })
     
     message, score, user, computer = game(id)
-    if computer=='r':
-        computer = 'rock'
+    rockpaperscissor = {
+        "r":"rock",
+        "p":"paper",
+        "s":"scissor"
+    }
 
-    if computer=='s':
-        computer = 'scissor'
-    
-    if computer=='p':
-        computer = 'paper'
-
-    if user=='r':
-        user = 'rock'
-
-    if user=='s':
-        user = 'scissor'
-    
-    if user=='p':
-        user = 'paper'
+    for choosen in range(1):
+        user = rockpaperscissor.get(user)
+        computer = rockpaperscissor.get(computer)
 
     return render(request,'welcome.html',{
             "names":a,
