@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-(l-v0w0to_krupnwt)-^n(&9_m7c#pj5$@ebs&^q8#m1r42^05
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://rockpaperscissorgame0.herokuapp.com/',
+ALLOWED_HOSTS = ['rockpaperscissorgame0.herokuapp.com',
                  '127.0.0.1']
 
 
